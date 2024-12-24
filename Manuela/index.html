@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <title>Juan&Manu</title>
+  <meta name="keywords" content="Amor, niña de mis sueños, mi lugar feliz">
+  <meta name="description" content="Página para el amor de mi vida, Manuela Cardona Garcia">
+  <meta name="author" content=" Juan Esteban Vera Velez">
+  <link rel="shortcut icon" href="images/corazon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+  <style>
+    .carousel-figure-medium {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .carousel-img-medium {
+        width: 550px !important;
+        height: 550px !important;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+
+    .carousel-item.active .carousel-img-medium {
+      animation: zoomIn 1s forwards;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); }
+      to { transform: scale(1); }
+    }
+
+    .carousel-caption {
+        position: relative;
+        padding: 20px;
+    }
+
+    .text-bg {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .carousel-item {
+        overflow: hidden;
+    }
+    
+    .gallery-figure {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .glasses_box {
+        padding: 15px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        .gallery-figure {
+            height: 250px;
+        }
+        
+        .gallery-image {
+            max-width: 250px;
+            max-height: 250px;
+        }
+    }
+
+    .frases-enamoradas {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 34px;
+        font-family: 'Times New Roman', serif;
+        color: #333;
+    }
+
+    .floating-heart {
+      position: fixed;
+      font-size: 24px;
+      pointer-events: none;
+      animation: float 3s forwards;
+      z-index: 1000;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+
+    .foto {
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .foto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .love-message {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 1000;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .love-message:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="main-layout">
+  <div class="loader_bg">
+    <div class="loader"><img src="images/Manu8.jpeg" alt="Manu" /></div>
+  </div>
+  
+  <header>
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+            <div class="full">
+              <div class="center-desk">
+                <div class="audio-container">
+                  <audio controls id="audioElement">
+                      <source preload="auto" src="images/Sebastián Yatra – Cómo Mirarte (Official Video).mp3" type="audio/mpeg">
+                  </audio>
+                  <button id="playButton" class="nav-link">Reproducir Audio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+            <nav class="navigation navbar navbar-expand-md navbar-dark ">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Mi niña preciosa, te quiero con todo el corazón</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="banner_main">
+    <div id="banner1" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#banner1" data-slide-to="0" class="active"></li>
+        <li data-target="#banner1" data-slide-to="1"></li>
+        <li data-target="#banner1" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="text-bg">
+                <h1><span class="letra">La Mujer<br></span>más linda del mundo mundial</h1>
+                <figure class="carousel-figure-medium">
+                  <img src="images/Manu2.jpeg" alt="Manu 2" class="carousel-img-medium"/>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="text-bg">
+                <h1> <span class="letra">Amo tu personalidad <br></span> Y todo tu carisma</h1>
+                <figure class="carousel-figure-medium">
+                  <img src="images/Manu3.jpeg" alt="Manu 3" class="carousel-img-medium"/>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="text-bg">
+                <h1> <span class="letra">Eres una mujer tan especial<br></span>Con mucha belleza interior y exterior </h1>
+                <figure class="carousel-figure-medium">
+                  <img src="images/Manu4.jpeg" alt="Manu4" class="carousel-img-medium"/>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </a>
+      <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
+
+  <div class="about">
+    <div class="container">
+      <div class="row d_flex">
+        <div class="col-md-5">
+          <div class="about_img">
+            <figure><img src="images/Manu10.jpeg" alt="Manu10" /></figure>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="titlepage">
+            <h2>Manuela Cardona Garcia</h2>
+            <p>Soy muy afortunado de tener una niña tan maravillosa como tu, llena de cosas bonitas, cualidades, una mujer educada y con una expresión en su carita que demuestra demasiadas cosas.
+              Agradezco plenamente por tenerte en mi vida y por ser esa mujer que me hace querer sacar mi mejor versión y mejorar cada dia.
+              Gracias por ser la luz en mi vida y llenar mi corazón de alegría.
+              Eres mi razón para sonreír, mi inspiración y mi felicidad. Te quiero con todo mi corazón, tu sabes eres la dueña de el y que te quiero de una manera que es dificil de explicar por todo lo que implica.
+              No fue tiempo, fue conexión y siempre quiero estar contigo, estando de tu lado y a tu lado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="glasses">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="titlepage">
+                    <h2>Quiero mostrarte fotos de la mujer que me tiene enamorado totalmente de ella</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w3-row-padding w3-padding-16 w3-center" id="Manuela">
+        <div class="w3-quarter">
+            <img src="images/Manu5.jpeg" alt="Manu-5" class="foto">
+            <h3>La mujer más perfecta de este mundo</h3>
+        </div>
+        <div class="w3-quarter">
+            <img src="images/Manu6.jpeg" alt="Manu-6" class="foto">
+            <h3>Todos tus perfiles son hermosos</h3>
+        </div>
+        <div class="w3-quarter">
+            <img src="images/Manu7.jpeg" alt="Manu-7" class="foto">
+            <h3>Te gusta tanto el blanco que pareces ser un angel caido del cielo</h3>
+        </div>
+        <div class="w3-quarter">
+            <img src="images/Manu8.jpeg" alt="Manu-8" class="foto">
+            <h3>Tu cara es la más linda que se puede ver en el mundo</h3>
+        </div>
+    </div>
+    <hr>
+    <h2 class="frases-enamoradas">A través de frases quiero expresarte cosas que siento por ti</h2>
+    <div class="w3-row-padding w3-padding-16 w3-center">
+        <div class="w3-quarter">
+            <img src="images/Manu9.jpeg" alt="Manu-9" class="foto">
+            <h3>"Tú eres siempre la respuesta cuando me preguntan que estoy pensando".</h3>
+        </div>
+        <div class="w3-quarter">
+            <img src="images/Manu10.jpeg" alt="Manu-10" class="foto">
+            <h3>"Tu amor se nota en cada detalle, cada gesto, cada decisión. Gracias por hacer que cada cosa valga la pena".</h3>
+        </div>
+        <div class="w3-quarter">
+            <img src="images/Manu11.jpeg" alt="Manu-11" class="foto">
+            <h3>"Los mejores regalos no vienen envueltos, tú por ejemplo".</h3>
+        </div>
+        <div class="w3-quarter">
+            <img src="images/Manu12.jpeg" alt="Manu-12" class="foto">
+            <h3>"El camino será largo, pero valdrá la pena recorrerlo junto a ti".</h3>
+        </div>
+    </div>
+  </div>
+  <hr>
+  <div class="glasses">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="titlepage">
+                    <h2>Fotos de quien esta totalmente enamorado de ti</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w3-row-padding w3-padding-16 w3-center" id="Juan">
+        <div class="w3-quarter">
+            <img src="images/Juan1.jpeg" alt="Juan-1" class="foto">
+        </div>
+        <div class="w3-quarter">
+            <img src="images/Juan2.jpeg" alt="Juan-2" class="foto">
+        </div>
+        <div class="w3-quarter">
+            <img src="images/Juan3.jpeg" alt="Juan-3" class="foto">
+        </div>
+        <div class="w3-quarter">
+            <img src="images/Juan4.jpeg" alt="Juan-4" class="foto">
+        </div>
+    </div>
+
+      
+    <hr>
+  <h2 class="frases-enamoradas">Tus gustos</h2>
+  <div class="love-message" onclick="showLoveMessage()">
+    ❤️ Click aquí
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/custom.js"></script>
+
+<script>
+  const messages = [
+    "Eres el amor de mi vida ❤️",
+    "Cada día me enamoro más de ti 💑",
+    "Tu sonrisa ilumina mi mundo ✨",
+    "Eres mi felicidad completa 🌟",
+    "Te amo con todo mi corazón 💖"
+  ];
+
+  let currentMessage = 0;
+
+  function showLoveMessage() {
+    const message = messages[currentMessage];
+    currentMessage = (currentMessage + 1) % messages.length;
+    
+    createFloatingHearts();
+    alert(message);
+  }
+
+  function createFloatingHearts() {
+    for (let i = 0; i < 10; i++) {
+      setTimeout(() => {
+        const heart = document.createElement('div');
+        heart.innerHTML = '❤️';
+        heart.className = 'floating-heart';
+        heart.style.left = Math.random() * window.innerWidth + 'px';
+        heart.style.top = window.innerHeight + 'px';
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 3000);
+      }, i * 300);
+    }
+  }
+
+  // Añadir efecto a las imágenes
+  document.querySelectorAll('.foto').forEach(img => {
+    img.addEventListener('click', () => createFloatingHearts());
+  });
+
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('.loader_bg').style.display = 'none';
+    }, 1500);
+  });
+
+
+  document.getElementById('playButton').addEventListener('click', function() {
+    const audio = document.getElementById('audioElement');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  });
+</script>
+<style>
+  .disney-container {
+      background: linear-gradient(45deg, #1e3a8a, #0f172a);
+      padding: 2rem;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      border-radius: 15px;
+  }
+
+  .title {
+      text-align: center;
+      color: #c7d2fe;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px rgba(199, 210, 254, 0.5);
+  }
+
+  .favorites-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+  }
+
+  .section {
+      flex: 1;
+      min-width: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease;
+  }
+
+  .section:hover {
+      transform: translateY(-5px);
+  }
+
+  .section h2 {
+      color: #93c5fd;
+      text-align: center;
+      margin-bottom: 1.5rem;
+  }
+
+  .item {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+  }
+
+  .item:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: scale(1.02);
+  }
+
+  .item-icon {
+      margin-right: 1rem;
+      font-size: 1.5rem;
+  }
+
+  .magic-sparkle {
+      position: absolute;
+      pointer-events: none;
+      animation: sparkle 1s linear forwards;
+  }
+
+  @keyframes sparkle {
+      0% {
+          transform: translate(-50%, -50%) scale(0);
+          opacity: 1;
+      }
+      100% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 0;
+      }
+  }
+
+  .playing {
+      background: rgba(147, 197, 253, 0.2);
+  }
+</style>
+  <p class="frases-enamoradas">Se que te gustan mucho las jirafas, que tu color favorito es el blanco y que te encantan las peliculas de Disney</p>
+  <br>
+  <center>
+    <img class="jirafa" src="images/jirafa.jpeg" alt="Jirafa">
+  </center>
+  <center>
+    <img class="princesas" src="images/princesas.jpeg" alt="Princesas">
+  </center>
+<div class="disney-container">
+  <h1 class="title">✨ Los Favoritos de Mi Niña ✨</h1>
+  
+  <div class="favorites-container">
+      <div class="section">
+          <h2>🎵 Canciones Favoritas</h2>
+          <div class="item" data-type="song">
+              <span class="item-icon">🎵</span>
+              Me voy
+          </div>
+          <div class="item" data-type="song">
+              <span class="item-icon">🎵</span>
+              Si pudiera
+          </div>
+          <div class="item" data-type="song">
+              <span class="item-icon">🎵</span>
+              Una y otra vez
+          </div>
+          <div class="item" data-type="song">
+              <span class="item-icon">🎵</span>
+              La distancia
+          </div>
+          <div class="item" data-type="song">
+              <span class="item-icon">🎵</span>
+              Donde nadie pueda ir
+          </div>
+      </div>
+
+      <div class="section">
+          <h2>🎬 Películas Favoritas</h2>
+          <div class="item" data-type="movie">
+              <span class="item-icon">🎬</span>
+              Aladin
+          </div>
+          <div class="item" data-type="movie">
+              <span class="item-icon">🎬</span>
+              Toy Story
+          </div>
+          <div class="item" data-type="movie">
+              <span class="item-icon">🎬</span>
+              Coraline
+          </div>
+          <div class="item" data-type="movie">
+              <span class="item-icon">🎬</span>
+              El rey león
+          </div>
+          <div class="item" data-type="movie">
+              <span class="item-icon">🎬</span>
+              Enredados
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.item').forEach(item => {
+      item.addEventListener('click', function(e) {
+          // Crear efecto de sparkle
+          const sparkle = document.createElement('div');
+          sparkle.className = 'magic-sparkle';
+          sparkle.innerHTML = '✨';
+          sparkle.style.left = e.pageX + 'px';
+          sparkle.style.top = e.pageY + 'px';
+          document.body.appendChild(sparkle);
+          
+          setTimeout(() => sparkle.remove(), 1000);
+
+  
+          document.querySelectorAll('.item').forEach(i => i.classList.remove('playing'));
+          this.classList.add('playing');
+
+          const audio = new Audio('data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA/+M4wAAAAAAAAAAAAEluZm8AAAAPAAAAAwAAAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//34AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//7kGQAAANUAeAQAAAgAAA0AAAABGAx4BAACAAACDAAAAABExBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=');
+          audio.play();
+      });
+  });
+
+  function createStar() {
+      const star = document.createElement('div');
+      star.className = 'magic-sparkle';
+      star.innerHTML = '✨';
+      star.style.left = Math.random() * window.innerWidth + 'px';
+      star.style.top = Math.random() * window.innerHeight + 'px';
+      document.body.appendChild(star);
+      setTimeout(() => star.remove(), 1000);
+  }
+
+  setInterval(createStar, 2000);
+</script>
