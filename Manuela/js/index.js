@@ -28,3 +28,28 @@ function initMap() {
     document.getElementById("mySidebar").style.display = "none";
   }
 
+
+const audio = document.getElementById('audioElement');
+const playButton = document.getElementById('playButton');
+
+
+playButton.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    playButton.textContent = 'Pausar';
+  } else {
+    audio.pause();
+    playButton.textContent = 'Reproducir';
+  }
+});
+
+
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}

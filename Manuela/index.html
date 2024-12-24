@@ -11,13 +11,33 @@
   <meta name="author" content=" Juan Esteban Vera Velez">
   <link rel="shortcut icon" href="images/corazon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-  <style>
+  <div class="reproductor-audio">
+    <audio id="audioElement" controls>
+      <source src="images/Sebastián Yatra – Cómo Mirarte (Official Video).mp3" type="audio/mp3">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <button id="playButton">Reproducir</button>
+  </div>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="w3_close()">×</a>
+    <p>Contenido de la barra lateral...</p>
+  </div>
+
+  <div class="texto">
+    <p>Contenido de la página aquí...</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
     .carousel-figure-medium {
         width: 100%;
         display: flex;
@@ -148,130 +168,55 @@
       transform: scale(1.1);
     }
   </style>
-</head>
-<body class="main-layout">
-  <div class="loader_bg">
-    <div class="loader"><img src="images/Manu8.jpeg" alt="Manu" /></div>
+  <img src="images/Manu1.jpeg"  height="300" width="320" alt="">
+  <img src="images/Manu2.jpeg" height="300" width="320" alt="">
+  <img src="images/Manu4.jpeg"height="300" width="320" alt="">
+  <img src="images/Manu3.jpeg"  height="300" width="320" alt="">
+  <div class="contenedor">
+    <div class="titlepage">
+      <h2>Manuela Cardona Garcia</h2>
+      <p>
+        Soy muy afortunado de tener una niña tan maravillosa como tú, llena de cosas bonitas, cualidades, una mujer educada y con una expresión en su carita que demuestra demasiadas cosas.
+        Agradezco plenamente por tenerte en mi vida y por ser esa mujer que me hace querer sacar mi mejor versión y mejorar cada día.
+        Gracias por ser la luz en mi vida y llenar mi corazón de alegría.
+        Eres mi razón para sonreír, mi inspiración y mi felicidad. Te quiero con todo mi corazón, tú sabes eres la dueña de él y que te quiero de una manera que es difícil de explicar por todo lo que implica.
+        No fue tiempo, fue conexión y siempre quiero estar contigo, estando de tu lado y a tu lado.
+      </p>
+    </div>
   </div>
   
-  <header>
-    <div class="header">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-            <div class="full">
-              <div class="center-desk">
-                <div class="audio-container">
-                  <audio controls id="audioElement">
-                      <source preload="auto" src="images/Sebastián Yatra – Cómo Mirarte (Official Video).mp3" type="audio/mpeg">
-                  </audio>
-                  <button id="playButton" class="nav-link">Reproducir Audio</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-            <nav class="navigation navbar navbar-expand-md navbar-dark ">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
-                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarsExample04">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Mi niña preciosa, te quiero con todo el corazón</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="banner_main">
-    <div id="banner1" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#banner1" data-slide-to="0" class="active"></li>
-        <li data-target="#banner1" data-slide-to="1"></li>
-        <li data-target="#banner1" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="carousel-caption">
-              <div class="text-bg">
-                <h1><span class="letra">La Mujer<br></span>más linda del mundo mundial</h1>
-                <figure class="carousel-figure-medium">
-                  <img src="images/Manu2.jpeg" alt="Manu 2" class="carousel-img-medium"/>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="carousel-caption">
-              <div class="text-bg">
-                <h1> <span class="letra">Amo tu personalidad <br></span> Y todo tu carisma</h1>
-                <figure class="carousel-figure-medium">
-                  <img src="images/Manu3.jpeg" alt="Manu 3" class="carousel-img-medium"/>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="carousel-caption">
-              <div class="text-bg">
-                <h1> <span class="letra">Eres una mujer tan especial<br></span>Con mucha belleza interior y exterior </h1>
-                <figure class="carousel-figure-medium">
-                  <img src="images/Manu4.jpeg" alt="Manu4" class="carousel-img-medium"/>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-      </a>
-      <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
-        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </section>
-
-  <div class="about">
-    <div class="container">
-      <div class="row d_flex">
-        <div class="col-md-5">
-          <div class="about_img">
-            <figure><img src="images/Manu10.jpeg" alt="Manu10" /></figure>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <div class="titlepage">
-            <h2>Manuela Cardona Garcia</h2>
-            <p>Soy muy afortunado de tener una niña tan maravillosa como tu, llena de cosas bonitas, cualidades, una mujer educada y con una expresión en su carita que demuestra demasiadas cosas.
-              Agradezco plenamente por tenerte en mi vida y por ser esa mujer que me hace querer sacar mi mejor versión y mejorar cada dia.
-              Gracias por ser la luz en mi vida y llenar mi corazón de alegría.
-              Eres mi razón para sonreír, mi inspiración y mi felicidad. Te quiero con todo mi corazón, tu sabes eres la dueña de el y que te quiero de una manera que es dificil de explicar por todo lo que implica.
-              No fue tiempo, fue conexión y siempre quiero estar contigo, estando de tu lado y a tu lado.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+  
+    .contenedor {
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100%; 
+      background-color: #f3f3f3; 
+    }
+  
+    .titlepage {
+      text-align: center; 
+      max-width: 600px; 
+      padding: 20px; 
+      background-color: #fff; 
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  
+  
 
   <div class="glasses">
     <div class="container">
         <div class="row">
             <div class="col-md-10 offset-md-1">
-                <div class="titlepage">
-                    <h2>Quiero mostrarte fotos de la mujer que me tiene enamorado totalmente de ella</h2>
+                <div class="titlepages">
+                    <h2 class="frases-enamoradas">Quiero mostrarte fotos de la mujer que me tiene enamorado totalmente de ella</h2>
                 </div>
             </div>
         </div>
@@ -320,8 +265,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 offset-md-1">
-                <div class="titlepage">
-                    <h2>Fotos de quien esta totalmente enamorado de ti</h2>
+                <div class="titlepages">
+                    <h2 class="frases-enamoradas">Fotos de quien esta totalmente enamorado de ti</h2>
                 </div>
             </div>
         </div>
@@ -355,6 +300,10 @@
   <script src="js/script.js"></script>
   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/custom.js"></script>
+  <script src="js/index.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 
 <script>
   const messages = [

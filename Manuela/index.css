@@ -1,0 +1,294 @@
+
+  .audio-container {
+    background-color: #7D2181; /* Color de fondo */
+    padding: 20px; /* Espacio alrededor del reproductor */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el contenido */
+    color: white; /* Color del texto */
+}
+
+button {
+    margin-top: 10px; /* Espacio entre el reproductor y el botón */
+    padding: 10px 20px; /* Espacio dentro del botón */
+    background-color: white; /* Color de fondo del botón */
+    color:white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #ddd; 
+}
+h1{
+    text-align: center;
+}
+
+.manu{
+    height:0px;
+}
+
+.letra{
+    color: black;
+}
+.carousel-figure-medium {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-img-medium {
+    width: 300px !important;
+    height: 250px !important;
+    object-fit: cover;
+}
+
+/* Ajuste del contenedor del carrusel */
+.carousel-caption {
+    position: relative;
+    padding: 20px;
+}
+
+/* Ajuste del texto */
+.text-bg {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Asegurarse que las imágenes no se desborden */
+.carousel-item {
+    overflow: hidden;
+}
+
+
+.foto {
+    height: 350px !important;
+    width: 300px !important;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd; /* Opcional: agrega un borde para identificar las imágenes */
+}
+.jirafa{
+height: 300px;
+width: 300px;
+margin: 20px;
+padding: 5px;
+display: block;
+margin: auto;
+}
+.princesas{
+height: 300px;
+width: 300px;
+padding: 5px;
+display: block;
+margin: auto;
+}
+
+#carouselExample {
+    margin-top: 0;
+    width: 100%;
+    height: 400px; /* Ajusta la altura según tus necesidades */
+    position: relative;
+  }
+  
+  .carousel-inner img {
+    object-fit: cover;
+    height: 100%;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.25rem;
+  }
+  /* Estilo del reproductor de audio flotante */
+.reproductor-audio {
+    position: fixed; /* Fija el reproductor en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 9999; /* Asegura que esté por encima del resto del contenido */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para darle un efecto de profundidad */
+    display: flex; /* Alinea los elementos en el reproductor */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra el contenido verticalmente */
+  }
+  
+  .reproductor-audio audio {
+    width: 80%; /* Tamaño del reproductor */
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .reproductor-audio button {
+    background-color: #2fb4cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .reproductor-audio button:hover {
+    background-color: #1a8a99;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Texto en la página */
+  .texto {
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 28px;
+  }
+  
+  /* Animación de fondo para el texto */
+  @keyframes fanimado {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .container-card {
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .title-cards {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .cards {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease-out;
+    cursor: default;
+  }
+  
+  .card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 210px;
+  }
+  
+  .card .contenido-card {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card .contenido-card h3 {
+    margin-bottom: 15px;
+    color: black;
+  }
+  
+  .card .contenido-card p {
+    line-height: 1.8;
+    color: black;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .card .contenido-card a {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    margin-bottom: 5px;
+  }
+  
+  .card .contenido-card a:hover {
+    background: #2fb4cc;
+    color: #fff;
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    .container-card {
+      flex-wrap: wrap;
+    }
+    .card {
+      margin: 15px;
+    }
+  }
+  

@@ -1,0 +1,85 @@
+
+  .audio-container {
+    background-color: #7D2181; /* Color de fondo */
+    padding: 20px; /* Espacio alrededor del reproductor */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el contenido */
+    color: white; /* Color del texto */
+}
+
+button {
+    margin-top: 10px; /* Espacio entre el reproductor y el botón */
+    padding: 10px 20px; /* Espacio dentro del botón */
+    background-color: white; /* Color de fondo del botón */
+    color:white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #ddd; 
+}
+h1{
+    text-align: center;
+}
+
+.letra{
+    color: black;
+}
+.carousel-figure-medium {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-img-medium {
+    width: 300px !important;
+    height: 250px !important;
+    object-fit: cover;
+}
+
+/* Ajuste del contenedor del carrusel */
+.carousel-caption {
+    position: relative;
+    padding: 20px;
+}
+
+/* Ajuste del texto */
+.text-bg {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Asegurarse que las imágenes no se desborden */
+.carousel-item {
+    overflow: hidden;
+}
+
+
+.foto {
+    height: 350px !important;
+    width: 300px !important;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd; /* Opcional: agrega un borde para identificar las imágenes */
+}
+.jirafa{
+height: 300px;
+width: 300px;
+margin: 20px;
+padding: 5px;
+display: block;
+margin: auto;
+}
+.princesas{
+height: 300px;
+width: 300px;
+padding: 5px;
+display: block;
+margin: auto;
+}
